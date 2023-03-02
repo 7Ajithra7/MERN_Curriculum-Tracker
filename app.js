@@ -29,7 +29,7 @@ Mongoose.connect("mongodb+srv://ajithra:ajithra@cluster000.hjf3qzh.mongodb.net/C
 
 
 const path = require('path');
-app.use(express.static(path.join(__dirname,'/build')));
+app.use(Express.static(path.join(__dirname,'/build')));
 app.get("/*", function(req, res) {
 res.sendFile(path.join(__dirname,'/build/index.html')); }); 
 
