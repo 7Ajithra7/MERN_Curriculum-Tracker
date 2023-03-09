@@ -18,7 +18,7 @@ const signupController = {
                     res.json({ "Status": "Error", "Error": "Registration Failed ! Check Entered" })
                 } else {
                     let token = JWT.sign({ employeeId: req.body.employeeId, role: "faculty" }, process.env.JWT_SECRET, { expiresIn: '1h' })
-                    res.json({ "Status": "Success", "Data": data[0], token })
+                    res.json({ "Status": "Success", data, token })
                 }
             })
     },
